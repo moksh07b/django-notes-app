@@ -15,9 +15,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app/backend
 
-EXPOSE 6969
+EXPOSE 8000
 #RUN python manage.py migrate
 #RUN python manage.py makemigrations
-CMD ["gunicorn", "notesapp.wsgi", "--bind", "0.0.0.0:6969", "--workers", "3"]
+CMD ["gunicorn", "notesapp.wsgi", "--bind", "0.0.0.0:8000", "--workers", "3"]
 
 
